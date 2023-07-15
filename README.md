@@ -2,6 +2,10 @@
 
 Welcome to the Number Guessing Game! This is a simple game where players try to guess a secret number within a specified range. The game provides different difficulty levels and keeps track of high scores.
 
+## TIP
+
+did you know while playing game you can type "show" to show a number, if you too lazy to play lol.
+
 ## Features
 
 - Three difficulty levels: Easy, Medium, and Hard
