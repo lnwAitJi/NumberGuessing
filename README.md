@@ -62,9 +62,8 @@ This project is licensed under the MIT License
 
 ## Image:
 Here is some image :)
-
+# On Login!
 ![login](https://github.com/lnwAitJi/NumberGuessing/assets/100911929/b1420aad-daf7-41f9-b9cb-1710135a6e39)
-
-
+# Selection difficulty!
 ![difficulty](https://github.com/lnwAitJi/NumberGuessing/assets/100911929/62668bdc-84f5-4957-bc40-5f85d5443a0e)
 
