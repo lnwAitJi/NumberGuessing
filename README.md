@@ -43,7 +43,7 @@ pip install termcolor
 ## Usage
 Run the game:
 ```shell
-python main.py
+python Game/main.py
 ```
 
 1) Follow the on-screen instructions to play the game.
