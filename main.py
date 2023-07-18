@@ -129,6 +129,7 @@ def remove_profile_prompt():
         input(colored("\nPress Enter to continue...", "cyan"))
 
 def play_game(difficulty, player_name):
+    debug = false
     secret_number = random.randint(1, 100)
     attempts = 0
     max_attempts = 0
@@ -139,10 +140,10 @@ def play_game(difficulty, player_name):
         additional_feature = "Extra Hint: The secret number is divisible by 5."
     elif difficulty == '2':
         max_attempts = 7
-        additional_feature = "Additional Challenge: You only have one hint available. Enter 'show' to reveal the secret number."
+        additional_feature = "Additional Challenge: You only have one hint available."
     elif difficulty == '3':
         max_attempts = 5
-        additional_feature = "Ultimate Challenge: The secret number is a prime number. Enter 'show' to reveal the secret number."
+        additional_feature = "Ultimate Challenge: The secret number is a prime number. Enter."
 
     clear_console()
     print(colored("______________________________________________________", "cyan"))
@@ -155,7 +156,7 @@ def play_game(difficulty, player_name):
     while attempts < max_attempts:
         user_guess = input("Take a guess: ")
         attempts += 1
-        if user_guess == 'show':
+        if user_guess == 'show' && debug == false:
             print(f"The secret number is: {secret_number}")
             continue
         try:
