@@ -144,7 +144,7 @@ def remove_profile_prompt():
 
 def play_game(difficulty, player_name):
     clear_console()
-    debug = True
+    debug = False
     print(f"กรุณารอตัวเลขลับสุ่ม..")
     time.sleep(0.2)
     secret_number = random.randint(1, 100)
@@ -306,7 +306,8 @@ def main_menu(player_name="nonPlayer"):
     print(colored("1. เล่นเกม", "green"))
     print(colored("2. ดูคะแนนสูงสุด", "yellow"))
     print(colored("3. ออกเกม", "red"))
-    choice = input("\nใส่ตัวเลือกของคุณ (1-3): ")
+    print(colored("4. ลบโปรไฟล์", "red"))
+    choice = input("\nใส่ตัวเลือกของคุณ (1-4): ")
     return choice
 
 def start_game():
@@ -350,6 +351,8 @@ def start_game():
             break
         elif choice == '4':
             remove_profile_prompt()
+        else:
+            print("ตัวเลือกไม่ถูกต้อง")
 
 try:
     start_game()
