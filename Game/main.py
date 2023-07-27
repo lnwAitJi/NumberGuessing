@@ -137,15 +137,15 @@ def remove_profile_prompt():
 
 def play_game(difficulty, player_name):
     clear_console()
-    debug = True
+    debug = False
     print(f"Please wait while the secret number is being generated.")
     secret_number = random.randint(1, 100)
 
     if difficulty == '1':
-        while check_dot(secret_number):
+        while not check_dot(secret_number / 5):
             secret_number = random.randint(1, 100)
     elif difficulty == '2':
-        while secret_number % 2 != 0:
+        while not check_dot(secret_number / 2):
             secret_number = random.randint(1, 100)
     elif difficulty == '3':
         while not is_prime(secret_number):
@@ -299,7 +299,8 @@ def main_menu(player_name="nonPlayer"):
     print(colored("1. Play Game", "green"))
     print(colored("2. High Score", "green"))
     print(colored("3. Exit", "green"))
-    choice = input("\nEnter your choice (1-3): ")
+    print(colored("4. Del Profile", "red"))
+    choice = input("\nEnter your choice (1-4): ")
     return choice
 
 def start_game():
@@ -343,9 +344,11 @@ def start_game():
             break
         elif choice == '4':
             remove_profile_prompt()
+        else:
+            print("Invaild Input..")
 
 try:
     start_game()
 except KeyboardInterrupt:
     clear_console()
-    print("[ Goodbye!! ]")
+    print("Game was shutdown by 'Ctrl + C'")
